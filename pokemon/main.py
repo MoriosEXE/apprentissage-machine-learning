@@ -1,16 +1,16 @@
-# This is a sample Python script.
-
-# Press Maj+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
-
-
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
+#------------------------------------------
+# IMPORT DES MODULES
+#------------------------------------------
+import os #Utilisation du module OS (operating system)
 
 
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
+#Utilisation du module Pandas
+import pandas as pnd
+import os
 
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+pnd.set_option('display.max_columns',None)
+
+nosPokemons = pnd.read_csv("datas/pokedex.csv", encoding='cp1252')
+
+print(nosPokemons.columns.values)
+print(nosPokemons.head(10))
